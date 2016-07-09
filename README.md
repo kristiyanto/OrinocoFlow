@@ -78,7 +78,7 @@ Input format (JSON)
 ```
  Output format (txt)
 ```
-1
+1.00
 ```
 Log output format (if requested)
 ```
