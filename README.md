@@ -2,6 +2,7 @@
 ![](images/P1090489.jpg)
 
 By **Daniel Kristiyanto**
+
 *Seattle. Summmer, 2016*
 
 # Challenge Summary
