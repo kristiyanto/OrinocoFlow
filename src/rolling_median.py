@@ -87,8 +87,7 @@ class Graph:
     
     ## A static call returning current maximum timstamp
     def getMaxTime(self):
-        if not self.currMaxTime: self.updateMaxTime()
-        return self.currMaxTime
+        return self.currMaxTime if self.currMaxTime else self.updateMaxTime()
     
     ## Scan through the graph to compute the rolling median 
     def updateMedian(self):
@@ -224,16 +223,16 @@ def filesLookup(inputFile, logFile='log.txt', outputFile='output.txt'):
             json = json.loads(open(inputFile, 'r').readline())
             if ('actor', 'created_time', 'target') in list(json.keys()): pass
         except:
-            raise ValueError('Input file: {} does not have required json fields.'.format(inputFile))
+            sys.exit('Input file: {} does not have required json fields.'.format(inputFile))
 
     try:
-        open(logFile, 'w').close()
+        open(outputFile, 'w').close()
         return True
     except:
         raise ValueError('Unable to write output files.')
         
     try:
-        open(outputFile, 'w').close()
+        open(logFile, 'w').close()
     except:
         pass
 
