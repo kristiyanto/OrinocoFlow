@@ -3,9 +3,9 @@
 ###########################################################
 # Daniel Kristiyanto, danielkr@uw.edu
 #
+# Summer, 2016
+#
 # A graph to find a money transfer transaction in Venmo
-# Submission for Coding Challange by InsightDataScience
-# https://github.com/InsightDataScience/coding-challenge
 # Please refer readme.md for more detailed usage and information
 #
 ###########################################################
@@ -16,6 +16,10 @@ import json
 import datetime as dt
 from collections import Counter
 
+
+'''
+===== CLASSES ====
+'''
 
 class Graph:
     def __init__(self, out='output.txt', verbose=False):
@@ -126,7 +130,7 @@ class Graph:
             [(i[0], i[1].strftime("%I:%M:%S")) for i in self.vertices[v].targets]))
         return txt
                 
-        
+
             
 class Node:
     ## By default, a vertex (node) does not have any egdes/target
@@ -176,6 +180,11 @@ class Node:
         return self.created_time if not self.targets else self.nodeMaxTime
 
     
+
+'''
+===== FUNCTIONS ====
+'''
+    
 ## Function to compute a median given a list    
 def median(vector):
     if not isinstance(vector, list): raise ValueError('Input must be a list.')
@@ -183,6 +192,7 @@ def median(vector):
     a = len(vector)
     b = a - 1
     return (vector[a//2] + vector[b//2]) / 2.0
+
 
 
 ## Function to record a detailed state of the current graph to a log file. 
@@ -203,6 +213,8 @@ def logItems(graph, write=True, file='log.txt', verbose=False):
     if write: 
         with open(file, "a") as o: o.write(txt)
 
+                        
+            
 ## Making sure the specified files are readable and or writeable            
 def filesLookup(inputFile, logFile='log.txt', outputFile='output.txt'):
     if not os.path.exists(inputFile): 
@@ -225,6 +237,10 @@ def filesLookup(inputFile, logFile='log.txt', outputFile='output.txt'):
     except:
         pass
 
+'''
+===== MAIN FILE ====
+'''
+        
 def main():
     global timeFormat
     global timeWindow
@@ -238,7 +254,6 @@ def main():
     inputFile = sys.argv[1].strip() if len(sys.argv)>1 else 'venmo-trans.txt'
     outputFile = sys.argv[2].strip() if len(sys.argv)>2 else 'output.txt' 
     logFile = sys.argv[3].strip() if len(sys.argv)>3 else None
-
     
     ## Get the files ready
     filesLookup(outputFile=outputFile, inputFile=inputFile) 
