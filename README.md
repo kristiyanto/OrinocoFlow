@@ -144,4 +144,4 @@ docker run -ti -v /Users/path/to/files:/data -ti kristiyanto/orinocoflow /bin/ba
 The original directory structures can be found in `/insight` folder inside the container.
 
 # Contact
-Feel free to update issues or reach me through email for any questions or if you spotted a pirate. 
+Feel free to submit issues or reach me through email for any questions or if you spotted a pirate. Ahoy hoy! 
