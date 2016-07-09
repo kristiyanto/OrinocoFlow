@@ -24,7 +24,7 @@ Python is used for this challange. The code was tested for both Python 2.7 and P
 It was written in MacOS environtment and should work in Linux. A Docker container for this submission is also available (more information below).
 
 #### Can I use pre-built packages, modules, or libraries?
-No "exotic" packages was used. A minimal and Python standard is used (e.g `json`, `datetime`).
+No "exotic" packages was used. A minimal and Python standard packages are used (e.g `json`, `datetime`).
 
 #### Will you email me if my code doesn't run?
 The codes were tested using the provided script. Additionally, a Docker container with the exact environtment is also available.
@@ -57,7 +57,7 @@ python rolling_median.py input.txt output.txt
 
 ```
 
-To generate a detailed log file, use verbose. The Produced logfile is generally large, and may significantly slow down the process. 
+To generate a detailed log file, use verbose. The produced logfile is generally large, and may significantly slow down the process. 
 
 ```
 python rolling_median.py input.txt output.txt logfile.txt
@@ -104,6 +104,12 @@ On docker-enabled infrastructures run:
 docker run -v /Users/path/to/files:/data kristiyanto/orinocoflow 
 ```
 
-The container will process any txt files found in the mounted directory and produce an output with suffix `.OUT`, and exit when finished. 
+The container will process any txt files found in the mounted directory and produce an output with suffix `.OUT` in the same directory, and exit when finished. 
 
+Alternatively, container can also be run in an interactive mode:
+
+```
+docker run -v /Users/path/to/files:/data -ti kristiyanto/orinocoflow
+```
+The directory structures can be found in `/insight` folder inside the container.
 
