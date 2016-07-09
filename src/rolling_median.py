@@ -64,7 +64,7 @@ class Graph:
     ## e.g: timestamps, if actor is valid,
     ## or if transactions is already existed (hence, replace it if newer)
     def isValid(self, node, target, created_time):
-        if node.actor not in self.vertices: return False
+        if node.actor not in self.vertices and target in self.vertices: return False
         if node.created_time < self.curMinTime: return False
         if (target in [n[0] for n in self.vertices[node.actor].getTargets()]):
             return self.vertices[node.actor].replaceTarget(target, created_time)
