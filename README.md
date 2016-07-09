@@ -132,7 +132,7 @@ This submission is also available as a Docker package.
 On docker-enabled infrastructures run:
 
 ```
-docker run -v /Users/path/to/files:/data kristiyanto/orinocoflow 
+docker run --rm -v /Users/path/to/files:/data kristiyanto/orinocoflow 
 ```
 
 The container will process any txt files found in the mounted directory and produce an output with suffix `.OUT` in the same directory, and exit when finished. 
@@ -140,7 +140,7 @@ The container will process any txt files found in the mounted directory and prod
 Alternatively, container can also be run in an interactive mode:
 
 ```
-docker run -v /Users/path/to/files:/data -ti kristiyanto/orinocoflow
+docker run -ti -v /Users/path/to/files:/data -ti kristiyanto/orinocoflow /bin/bash
 ```
 The original directory structures can be found in `/insight` folder inside the container.
 
