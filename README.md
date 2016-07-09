@@ -65,13 +65,14 @@ Generally, to run the script:
 python rolling_median.py input.txt output.txt 
 ```
 
-To generate a detailed log file, use verbose. The produced logfile is generally large, and may significantly slow down the process. 
+
+To generate a detailed log file (e.g. Debugging), declare the desired logfile name. This may significantly slow down the process and the produced logfile can potentially be very large.
 
 ```
 python rolling_median.py input.txt output.txt logfile.txt
 ```
 
-
+#### Convention
 Input format (JSON)
 ```
 {"created_time": "2016-04-07T03:33:19Z", "target": "Jordan-Gruber", "actor": "Jamie-Korn"}
