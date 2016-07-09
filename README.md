@@ -1,7 +1,9 @@
 # Sail Away!
 ![](images/P1090489.jpg)
-By Daniel Kristiyanto
-Seattle. Summmer, 2016
+
+By **Daniel Kristiyanto**
+
+__Seattle. Summmer, 2016__
 
 # Challenge Summary
 
