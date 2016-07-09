@@ -59,6 +59,7 @@ For this challenge, the input a `.txt` file containing at least three informatio
 
 The output is a `.txt` file with each row is the median for every state of the transaction in the input file. 
 
+#### Usage
 Generally, to run the script:
 ```
 python rolling_median.py input.txt output.txt 
@@ -70,15 +71,16 @@ To generate a detailed log file, use verbose. The produced logfile is generally 
 python rolling_median.py input.txt output.txt logfile.txt
 ```
 
-#### Input format (JSON)
+
+Input format (JSON)
 ```
 {"created_time": "2016-04-07T03:33:19Z", "target": "Jordan-Gruber", "actor": "Jamie-Korn"}
 ```
-#### Output format (txt)
+ Output format (txt)
 ```
 1
 ```
-#### Log output format (if requested)
+Log output format (if requested)
 ```
 MEDIAN: 1.0 
  Sorted Egdes: [1, 1] 
