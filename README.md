@@ -62,14 +62,35 @@ The output is a `.txt` file with each row is the median for every state of the t
 Generally, to run the script:
 ```
 python rolling_median.py input.txt output.txt 
-
 ```
 
 To generate a detailed log file, use verbose. The produced logfile is generally large, and may significantly slow down the process. 
 
 ```
 python rolling_median.py input.txt output.txt logfile.txt
+```
 
+#### Input format (JSON)
+```
+{"created_time": "2016-04-07T03:33:19Z", "target": "Jordan-Gruber", "actor": "Jamie-Korn"}
+```
+#### Output format (txt)
+```
+1
+```
+#### Log output format (if requested)
+```
+MEDIAN: 1.0 
+ Sorted Egdes: [1, 1] 
+ Edges: 
+ Counter({'Jordan-Gruber': 1, 'Jamie-Korn': 1})         
+
+ Time Window: 03:32:01 03:33:01 
+
+ Transactions: 
+ Actor: Jamie-Korn 
+ Targets: [('Jordan-Gruber', '03:33:01')] 
+         ------- 
 ```
 
 # Design
