@@ -114,5 +114,5 @@ Alternatively, container can also be run in an interactive mode:
 ```
 docker run -v /Users/path/to/files:/data -ti kristiyanto/orinocoflow
 ```
-The directory structures can be found in `/insight` folder inside the container.
+The original directory structures can be found in `/insight` folder inside the container.
 
