@@ -5,6 +5,10 @@ By **Daniel Kristiyanto**
 
 *Seattle. Summmer, 2016*
 
+
+Language: Python 3.5
+Required packages: os, sys, json, datetime, collections
+
 # Challenge Summary
 
 This challenge requires participats to:
