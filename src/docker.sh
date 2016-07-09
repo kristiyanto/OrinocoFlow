@@ -1,4 +1,8 @@
 #!/bin/bash
+# This script is only used for the Docker Container
+# Container is available at Dockerhub: 
+# docker pull kristiyanto/orinocoflow
+
 cd /data
 for f in *.txt
 do
