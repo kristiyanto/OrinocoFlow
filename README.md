@@ -135,10 +135,9 @@ On docker-enabled infrastructures run:
 docker run --rm -v /Users/path/to/files:/data kristiyanto/orinocoflow 
 ```
 
-The container will process any txt files found in the mounted directory and produce an output with suffix `.OUT` in the same directory, and exit when finished. 
+In this case, the volume must be mounted to /data. The container will process any txt files found in the mounted directory and produce an output with prefix `OUT_` in the same directory, and exit when finished. 
 
 Alternatively, container can also be run in an interactive mode:
-
 ```
 docker run -ti -v /Users/path/to/files:/data -ti kristiyanto/orinocoflow /bin/bash
 ```
