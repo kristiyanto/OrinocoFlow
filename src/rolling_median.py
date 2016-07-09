@@ -68,7 +68,7 @@ class Graph:
         if node.created_time < self.curMinTime: return False
         if (target in [n[0] for n in self.vertices[node.actor].getTargets()]):
             return self.vertices[node.actor].replaceTarget(target, created_time)
-        elif(target in self.vertices):
+        elif(target in self.vertices and node.actor in [n[0] for n in self.vertices[target].get.Targets()]):
             return self.vertices[target].replaceTarget(node.actor, created_time)
         else:
             return True
