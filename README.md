@@ -7,7 +7,8 @@ By **Daniel Kristiyanto**
 
 
 Language: Python 3.5
-Required packages: os, sys, json, datetime, collections
+
+Required packages: `os`, `sys`, `json`, `datetime`, `collections`
 
 # Challenge Summary
 
