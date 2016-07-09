@@ -68,7 +68,7 @@ class Graph:
         if node.created_time < self.curMinTime: return False
         if (target in [n[0] for n in self.vertices[node.actor].getTargets()]):
             return self.vertices[node.actor].replaceTarget(target, created_time)
-        elif(target in self.vertices and node.actor in [n[0] for n in self.vertices[target].get.Targets()]):
+        elif(target in self.vertices and node.actor in [n[0] for n in self.vertices[target].getTargets()]):
             return self.vertices[target].replaceTarget(node.actor, created_time)
         else:
             return True
@@ -255,7 +255,10 @@ def main():
     logFile = sys.argv[3].strip() if len(sys.argv)>3 else None
     
     ## Get the files ready
-    filesLookup(outputFile=outputFile, inputFile=inputFile) 
+    if logFile:
+        filesLookup(outputFile=outputFile, inputFile=inputFile, logFile=logFile) 
+    else:
+        filesLookup(outputFile=outputFile, inputFile=inputFile) 
     
     ## This is the canvas
     g = Graph(out=outputFile, verbose=False)
@@ -281,6 +284,6 @@ def main():
                 g.getMedian(write=True)
                 
                 # 5) If asked (nicely), log the current graph state
-                if logFile: logItems(g, write=True, verbose=False)            
+                if logFile: logItems(g, write=True, verbose=False, file=logFile)            
   
 if __name__ == "__main__": main()
