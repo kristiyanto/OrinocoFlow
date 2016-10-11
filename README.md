@@ -1,4 +1,4 @@
-[![](https://images.microbadger.com/badges/image/kristiyanto/orinocoflow.svg)](https://microbadger.com/images/kristiyanto/orinocoflow "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/kristiyanto/orinocoflow.svg)](https://microbadger.com/images/kristiyanto/orinocoflow "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/kristiyanto/orinocoflow.svg)](https://microbadger.com/images/kristiyanto/orinocoflow "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/kristiyanto/orinocoflow.svg)](https://microbadger.com/images/kristiyanto/orinocoflow "Get your own version badge on microbadger.com") [![Build Status](https://travis-ci.org/kristiyanto/OrinocoFlow.svg?branch=master)](https://travis-ci.org/kristiyanto/OrinocoFlow)
 
 # Sail Away!
 ![](images/P1090489.jpg)
